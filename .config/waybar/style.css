@@ -1,0 +1,138 @@
+@define-color background #282828;
+@define-color background_h #1d2021;
+@define-color foreground #ebdbb2;
+
+@define-color color_orange #d65d0e;
+@define-color color_blue #458588;
+@define-color color_fg4 #a89984;
+@define-color color_green #98971a;
+@define-color color_yellow #d79921;
+@define-color color_red #cc241d;
+
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 35px;
+    font-family: 'CommitMono Nerd Font';
+    font-size: 15px;
+}
+
+window#waybar {
+    background: @background;
+    color: @foreground;
+}
+
+.modules-left {
+    margin-left: 8px;
+}
+
+.modules-right {
+    margin-right: 8px;
+}
+
+tooltip {
+    background: alpha(@background_h, .75);
+    color: @foreground;
+}
+
+#clock,
+#custom-pacman,
+#custom-notification,
+#bluetooth,
+#network,
+#battery,
+#pulseaudio,
+#backlight,
+#custom-kbd_backlight {
+    min-width: 12px;
+    margin: 0 7.5px;
+}
+
+#clock:hover,
+#custom-pacman:hover,
+#custom-notification:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#custom-kbd_backlight:hover {
+    transition: all .3s ease;
+    color: @color_orange;
+}
+
+#bluetooth {
+    margin-right: 2px;
+}
+
+#workspaces button {
+    all: unset;
+    padding: 0px 5px;
+    color: alpha(@color_orange, .4);
+    transition: all .3s ease;
+}
+
+#workspaces button:hover {
+    color: rgba(0, 0, 0, 0); 
+    border: none;
+    text-shadow: 0px 0px 1.5px alpha(@color_blue, .5);
+}
+
+#workspaces button.active {
+    color: @color_orange;
+    border: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+
+#workspaces button.empty {
+    color: rgba(0, 0, 0, 0);
+    border: none;
+    text-shadow: 0px 0px 2px alpha(@color_fg4, .2);
+}
+
+#workspaces button.empty:hover {
+    color: rgba(0, 0, 0, 0);
+    border: none;
+    text-shadow: 0px 0px 1.5px alpha(@color_blue, .5);
+}
+
+#workspaces button.empty.active {
+    color: @color_orange;
+    border: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+
+#battery.charging {
+    color: @color_green;
+}
+
+#battery.warning:not(.charging) {
+    color: @color_yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: @color_red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-expand {
+    padding: 0 5px;
+    color: alpha (@foreground, .2);
+    text-shadow: 0 0 2px rgba(0, 0, 0, .7);
+    transition: all .3s ease;
+}
+
+#custom-expand:hover {
+    color: alpha(@color_orange, .2);
+    text-shadow: 0 0 2px alpha(@color_orange, .5);
+}
+
+#custom-endpoint {
+    margin-left: 5px;
+    color: alpha(@color_orange, .2);
+    text-shadow: 0 0 1.5px alpha(@color_orange, .5);
+}
