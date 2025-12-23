@@ -129,3 +129,10 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Created by `pipx` on 2025-12-18 14:04:13
 export PATH="$PATH:/home/szymon/.local/bin"
 alias dots='/usr/bin/git --git-dir=/home/szymon/.dotfiles/ --work-tree=/home/szymon'
+
+# bun completions
+[ -s "/home/szymon/.bun/_bun" ] && source "/home/szymon/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
