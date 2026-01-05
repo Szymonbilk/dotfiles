@@ -1,1 +1,2 @@
-require("config.lazy")
+require("szymon.core")
+require("szymon.lazy")
