@@ -136,3 +136,5 @@ alias dots='/usr/bin/git --git-dir=/home/szymon/.dotfiles/ --work-tree=/home/szy
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+[ -f "/home/szymon/.ghcup/env" ] && . "/home/szymon/.ghcup/env" # ghcup-env
