@@ -117,9 +117,9 @@
         "on-click-right": "pavucontrol"
     },
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-discharging": "{icon}",
-        "format-charging": "{icon}",
+        "format": "{icon} {capacity}%",
+        "format-discharging": "{icon} {capacity}%",
+        "format-charging": "{icon} {capacity}%",
         "format-plugged": "",
         "format-icons": {
             "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
