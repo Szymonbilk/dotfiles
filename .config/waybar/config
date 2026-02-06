@@ -28,7 +28,7 @@
         "interval": 900,   
 	"exec": "bash -c 'echo $(( $(checkupdates 2>/dev/null | wc -l) + $(yay -Qua 2>/dev/null | wc -l) ))'",
         "exec-if": "exit 0",
-        "on-click": "ghostty -e sh -c 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
+        "on-click": "kitty sh -c 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
         "signal": 8,
         "tooltip": false,
     },
